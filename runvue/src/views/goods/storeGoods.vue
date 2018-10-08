@@ -6,11 +6,30 @@
     <div>
       <Form  :label-width="100" style="height: 38px;">
         <Input v-model="goodName"  placeholder="根据商品名查找" style="width: 200px;margin-right: 3px;float: left"></Input>
-        <FormItem label="店铺精选状态" style="width: 300px;float: left" >
-            <Select  v-model="goodStatus" style="margin-right: 3px;">
-                <Option value="1">全部</Option>
-                <Option value="yes">精选 </Option>
-                <Option value="no">非精选</Option>
+        <FormItem label="实体精选" style="width: 300px;float: left" >
+            <Select  v-model="goodOfflineChoice" style="margin-right: 3px;">
+                <Option value="5">全部</Option>
+                <Option value="1">自营 </Option>
+                <Option value="2">店铺经营</Option>
+            </Select>
+        </FormItem>
+        <FormItem label="商城优选" style="width: 300px;float: left" >
+            <Select  v-model="goodShopChoice" style="margin-right: 3px;">
+                <Option value="5">全部</Option>
+                <Option value="1">自营 </Option>
+                <Option value="2">店铺经营</Option>
+            </Select>
+        </FormItem><FormItem label="每日精选" style="width: 300px;float: left" >
+            <Select  v-model="goodEveryChoice" style="margin-right: 3px;">
+                <Option value="5">全部</Option>
+                <Option value="1">自营 </Option>
+                <Option value="2">店铺经营</Option>
+            </Select>
+        </FormItem><FormItem label="推广商品" style="width: 300px;float: left" >
+            <Select  v-model="goodExtension" style="margin-right: 3px;">
+                <Option value="5">全部</Option>
+                <Option value="1">自营 </Option>
+                <Option value="2">店铺经营</Option>
             </Select>
         </FormItem>
         <Button type="info" style="float: right;margin-right: 5px" @click="load(1)">搜索</Button>
