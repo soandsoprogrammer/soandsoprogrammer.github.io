@@ -1,0 +1,51 @@
+.fsbanner,
+.fsbanner>div>span {
+    /* obrigatório */
+    display: none;
+}
+
+div.fsbanner {
+    /* obrigatorio */
+    position: relative;
+    overflow: hidden;
+    /* opcional */
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-family: Verdana;
+    font-weight: bold;
+    border-radius: 5px;
+    /* -webkit-text-stroke: 1px black; */
+}
+
+.fsbanner>div {
+    position: absolute;
+    background-size: cover;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+}
+
+.fsbanner>div .name {
+    display: block;
+    writing-mode: vertical-rl;
+    font-family: CTBiaoSongSJ;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 3.64px;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+}
+
+.fsbanner>div .name.minimized {
+    /* css3 */
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    /* pode ser necessário ajustar isso dependendo da fonte escolhida */
+    bottom: -13px;
+    left: 7px;
+}
