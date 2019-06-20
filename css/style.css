@@ -1,0 +1,642 @@
+/* rest */
+html,body,h1,h2,h3,h4,ul,ol,li,a,span,div,dl,dt,dd,table,tr,td,th,button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "STZHONGS";
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+p {
+    font-family: "STZHONGS";
+}
+
+a:hover, a:focus {
+    color: inherit;
+}
+
+.clearFix {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
+
+/* 首页右侧导航 */
+.right-nav {
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #005198;
+    z-index: 9999;
+}
+
+.top-bg-icon-top {
+    width: inherit;
+    height: 90px;
+    background: url(../img/index-right-nav-top-bg.svg) no-repeat top center;
+} 
+
+.top-bg-icon-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: 90px;
+    background: url(../img/index-right-nav-bottom-bg.svg) no-repeat bottom center;
+}
+
+.right-nav-title {
+    width: auto;
+    font-size: 14px;
+    color: #FFF;
+    letter-spacing: 2px;
+    line-height: 20px;
+    padding: 0 8px 0 9px;
+}
+
+.right-nav-title .left-en {
+    height: 14px;
+    width: 200px;
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+    font-family: 'BodoniSvtyTwoSCITCTT-Book';
+    font-size: 14px;
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.right-nav-title .right-cn {
+    width: 14px;
+    float: right;
+}
+
+.nav-btn-box {
+    margin: 220px auto 20px auto;
+    width: 22px;
+    height: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav-btn-box .top-line {
+    width: inherit;
+    height: 2px;
+    margin-bottom: 5px;
+    background: #FFF;
+    transition: transform linear .3s;
+}
+
+.nav-btn-box .center-box {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5px;
+    opacity: 1;
+    transition: opacity linear .3s;
+}
+
+.center-box .left-line {
+    width: 50%;
+    height: 2px;
+    float: left;
+    background: #FFF;
+    transition: width linear .3s;
+}
+
+.center-box .right-line {
+    width: 30%;
+    height: 2px;
+    float: right;
+    float: right;
+    background: #FFF;
+    transition: width linear .3s;
+}
+
+.nav-btn-box .bottom-line {
+    width: inherit;
+    height: 2px;
+    background: #FFF;
+    transition: transform linear .3s;
+}
+
+/* 导航打开样式 */
+.nav-btn-box.active {
+    transition: transform linear .3s;
+}
+
+.nav-btn-box.active .top-line {
+    transform: rotate(40deg);
+    transform-origin: left center;
+}
+
+.nav-btn-box.active .center-box {
+    opacity: 0;
+}
+
+.nav-btn-box.active .bottom-line {
+    transform: rotate(-40deg);
+    transform-origin: left center;
+}
+
+.nav-btn-box.active:hover {
+    transform: rotate(360deg);
+    transform-origin: center center;
+}
+
+.nav-btn-box:hover .left-line {
+    width: 100%;
+}
+
+.nav-btn-box:hover .right-line {
+    width: 0;
+}
+
+.right-nav h3 {
+    font-family: 'STSongti-SC-Regular';
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 16px;
+    height: 44px;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.right-nav .next-btn {
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    bottom: 144px;
+    background: url(../img/next-btn-icon.png) no-repeat center;
+    cursor: pointer;
+    transition: bottom linear .3s;
+}
+
+.right-nav .next-btn:hover {
+    bottom: 140px;
+}
+
+/* 导航列表样式 */
+#nav-list {
+    position: fixed;
+    right: -910px;
+    top: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .1);
+    /* width: calc(100vw - 50px); */
+    width: 910px;
+    height: 100vh;
+}
+
+#nav-list .right-one-list {
+    float: right;
+    width: 417px;
+    height: 100vh;
+    background: #005198;
+    text-align: center;
+}
+
+.right-one-list  h1 {
+    width: inherit;
+    height: 160px;
+    font-size: 0;
+    overflow: hidden;
+    background: url(../img/nav-wither-logo.png) no-repeat center center;
+}
+
+.right-one-list li {
+    padding: 16px 0 19px 96px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    background: rgba(256, 256, 256, 0);
+    transition: background linear .3s;
+}
+
+.right-one-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 96px;
+    width: 42px;
+    height: 1px;
+    background: #FFF;
+}
+
+.right-one-list li:hover {
+    background: rgba(256, 256, 256, .1);
+}
+
+.right-one-list li::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFF;
+    transition: width linear .3s;
+}
+
+.right-one-list li:hover::before {
+    width: 100%;
+}
+
+
+.right-one-list li h3 {
+    display: inline-block;
+    font-size: 22px;
+    color: #FFF;
+    letter-spacing: 4px;
+}
+
+.right-one-list li span {
+    font-family: 'BodoniSvtyTwoSCITCTT-Book';
+    font-size: 16px;
+    color: rgba(256, 256, 256, .6);
+    margin-left: 5px;
+}
+
+#nav-list .left-two-list {
+    float: right;
+    width: 491px;
+    height: 100vh;
+    background: #005198;
+    border-right: 1px solid rgba(256, 256, 256, .3);
+}
+
+#nav-list .left-two-list {
+    float: right;
+    width: 492px;
+    height: 100vh;
+    padding-top: 160px;
+    text-align: center;
+}
+
+#nav-list .left-two-list li {
+    padding: 20px 0;
+    background: rgba(256, 256, 256, 0);
+    border-bottom: 2px solid rgba(256, 256, 256, 0);
+    transition: all linear .3s;
+}
+
+#nav-list .left-two-list li a {
+    font-size: 18px;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+#nav-list .left-two-list li:hover {
+    background: rgba(256, 256, 256, .1);
+    border-bottom: 2px solid rgba(256, 256, 256, .2);
+}
+
+/* 首页分屏效果 */
+
+#fullPage .section {
+    position: relative;
+}
+
+#fullPage .index1 {
+    background: url(../img/index-one-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+#fullPage canvas {
+    width: 100%;
+    height: 100vh;
+}
+
+.index1 #blue-down {
+    position: absolute;
+    left: 48%;
+    top: 65%;
+    cursor: pointer;
+}
+
+#index1Canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#index1Canvas2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 首页第二屏样式 */
+#fullPage .index2 {
+    position: relative;
+    background: #B3D6EF;
+}
+
+.index2 .bookText {
+    width: 0;
+    height: 290px;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: #F6C077;
+    padding: 18px 24px;
+    box-shadow: 1px 0 20px 1px rgba(0, 0, 0, .5) inset;
+}
+
+.index2 .bookText::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: url(../img/index2-book-border.png) #F6C077 repeat-x left bottom;
+}
+
+.index2 .bookText::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: url(../img/index2-book-border.png) #F6C077 repeat-x left top;
+}
+
+.index2 .bookText .leftBookShaft {
+    height: 350px;
+    width: 40px;
+    position: absolute;
+    left: -40px;
+    top: -29px;
+    /* background: url(../img/index2-book-shaft.png) repeat-x left center; */
+}
+
+.index2 .bookText .rightBookShaft {
+    height: 350px;
+    width: 40px;
+    position: absolute;
+    right: -40px;
+    top: -29px;
+    /* background: url(../img/index2-book-shaft.png) repeat-x right center; */
+}
+
+.index2 .bookText .bookShaft .top-header {
+    width: 100%;
+    height: 28px;
+    background: url(../img/index2-book-shaft-top.png) no-repeat center bottom;
+}
+
+.index2 .bookText .bookShaft .center-bg {
+    width: 100%;
+    height: 294px;
+    background: url(../img/index2-book-shaft-bg.png) repeat;
+}
+
+.index2 .bookText .bookShaft .bottom-heder {
+    width: 100%;
+    height: 28px;
+    background: url(../img/index2-book-shaft-bottom.png) no-repeat center top;
+}
+
+.index2 .bookText .bookContent {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    overflow: hidden;
+    /* padding: 50px 116px 0 116px; */
+}
+
+.index2 .bookText .bookContent .textContent {
+    width: 604px;
+    line-height: 30px;
+    letter-spacing: 3px;
+    margin: 50px auto 34px auto;
+}
+
+.index2 .bookText .bookContent .booksView {
+    display: block;
+    width: 194px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0 auto;
+    background: url(../img/index2-book-btn.png) no-repeat center center;
+}
+
+/* 首页第三屏样式 */
+.index3 .playBox {
+    float: left;
+    width: 25%;
+    height: 100vh;
+    border: 1px solid #ccc;
+}
+
+/* 首页第四瓶样式 */
+.index4 {
+    background: #E1ECFC;
+    position: relative;
+}
+
+.index4 .cultureBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.index4 .cultureBox .index4Logo {
+    width: 390px;
+    height: 48px;
+    display: inline-block;
+    background: url(../img/index4-logo.png) no-repeat right center;
+    margin-bottom: 64px;
+}
+
+.cultureBox .cultureListNav li {
+    display: inline-block;
+    width: 176px;
+}
+
+.cultureBox .cultureListNav li .imgBox {
+    height: 187px;
+    position: relative;
+    text-align: center;
+}
+
+.cultureBox .cultureListNav li .imgBox img {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    transition: transform linear .3s;
+}
+
+.cultureBox .cultureListNav li .imgBox:hover img {
+    transform: rotateY(180deg);
+}
+
+.cultureBox .cultureListNav li .cultureTitle {
+    font-size: 16px;
+    color: #FFF;
+    letter-spacing: 3px;
+}
+
+.cultureBox .viewDetail {
+    margin-top: 200px;
+    width: 194px;
+    height: 46px;
+    line-height: 46px;
+    background: url(../img/index4-view-bg.png) no-repeat center;
+    color: #666;
+    display: inline-block;
+}
+
+/* 首页第五瓶样式 */
+.index5 {
+    background: url(../img/index5-bg.png) no-repeat left top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index5 .upperBox {
+    position: absolute;
+    bottom: 68px;
+    left: 0;
+    height: 94px;
+    width: 100%;
+    text-align: center;
+}
+
+.index5 .upperBox .leftViewTetx {
+    font-size: 16px;
+    color: #FFF;
+    letter-spacing: 2px;
+    line-height: 30px;
+    width: 796px;
+    display: inline-block;
+    text-align: left;
+}
+
+.upperBox .leftViewTetx .viewBtn {
+    float: right;
+    width: 126px;
+    background: url(../img/index5-right-icon.png) no-repeat right center;
+}
+
+.upperBox .centerBrush {
+    width: 27px;
+    height: 93px;
+    display: inline-block;
+    margin-left: 58px;
+    background: url(../img/index5-wihter-brush.png) no-repeat top center;
+    vertical-align: top;
+}
+
+.upperBox .rightLogo {
+    width: 190px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 60px;
+    background: url(../img/index5-logo.png) no-repeat left center;
+}
+
+/* 首页第六屏样式 */
+.index6 {
+    background: #154985;
+    position: relative;
+}
+
+.index6 .contentBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 810px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.index6 .contentBox .conclusionText {
+    color: #FFF;
+    line-height: 30px;
+    margin-top: 43px;
+    margin-bottom: 30px;
+}
+
+.index6 .contentBox .viewText {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF;
+    letter-spacing: 2px;
+    width: 194px;
+    height: 48px;
+    line-height: 46px;
+    background: url(../img/viewBg.png) no-repeat top left 100%;
+}
+
+.index6 .index6Footer {
+    background: #2F2F2F;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.index6Footer > div {
+    display: inline-block;
+    line-height: 1.12;
+}
+
+.index6Footer .footLogo {
+    width: 139px;
+    height: 28px;
+    background: url(../img/footerLogo.png) no-repeat left top;
+    background-size: 100%;
+}
+
+.index6Footer .footText {
+    color: rgba(256, 256, 256, .7);
+    letter-spacing: 2px;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 15px;
+    padding-left: 17px;
+    border-left: 1px solid rgba(256, 256, 256, .7);
+}
+
+.index6Footer .footCopy {
+    color: rgba(256, 256, 256, .7);
+    vertical-align: top;
+    text-align: left;
+    margin-left: 140px;
+}

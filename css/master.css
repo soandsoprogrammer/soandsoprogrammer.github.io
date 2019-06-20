@@ -1,1851 +1,1718 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-div,
-p {
-    font-family: 'SimSun'
-}
-
 body,
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../img/ice-bg.png) no-repeat;
+    background-size: cover;
+}
+
+
+/*
+*    背景相关样式    
+*/
+
+.context {
+    box-sizing: border-box;
+    /*为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+    min-height: 100%;
+    padding-bottom: 120px;
+    overflow-x: hidden;
+}
+
+.header {
+    min-height: 262px;
+    margin-bottom: 50px;
+}
+
+.head-logo {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+}
+
+.head-baqi {
+    position: absolute;
+    top: 213px;
+    right: 220px;
+}
+
+.head-title {
+    font-family: STZhongsong;
+    font-size: 30px;
+    color: #333333;
+    letter-spacing: 0;
+    position: relative;
+    left: 217px;
+    top: 225px;
+}
+
+.head-title>img {
+    margin-left: 12px;
+}
+
+
+/*
+
+   页脚相关
+ 
+*/
+
+.footer {
+    height: 120px;
+    margin-top: -120px;
+    width: 100%;
+    background: #154985;
     position: relative;
 }
 
-::-webkit-scrollbar {
-    display: none;
+.footer-left,
+.footer-right {
+    position: absolute;
+    align-items: center;
 }
 
-.texttype {
-    text-indent: 2em;
-    text-align: justify;
-    font-size: 14px;
-    line-height: 28px;
-}
-
-.left-nav {
-    width: 93px;
-    height: 100%;
-    text-align: center;
-    background: #212121;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    z-index: 3;
-    opacity: 0;
-}
-
-.left-nav>img {
-    width: 45px;
-    height: 76px;
-    padding-top: 21px;
-}
-
-.left-nav p {
-    text-align: center;
-    /* padding: 4px 0 6px; */
-    line-height: 42px;
-}
-
-.swiper-container-h {
-    width: 100%;
-    height: 100%;
-    background: white;
+.footer-left {
+    bottom: 41px;
+    left: 157px;
+    color: white;
     display: flex;
-    margin: 0;
+    letter-spacing: 2.1px;
 }
 
-.swiper-container-v {
-    width: 90%;
-    height: 100%;
-    background: white;
-    display: flex;
-    margin: 0;
-}
-
-#teshu {
-    width: 100%!important;
-}
-
-.verses {
-    float: left;
-    padding-left: 20px;
-    z-index: 1;
-    position: relative;
-    animation: show 5s;
-    -moz-animation: show 5s;
-    -webkit-animation: show 6s ease 0s infinite normal;
-    -o-animation: show 5s;
-}
-
-.test {
-    animation: show 8s ease 0s infinite normal;
-    -moz-animation: show 8s ease 0s infinite normal;
-    -o-animation: show 8s ease 0s infinite normal;
-    -webkit-animation: show 8s ease 0s infinite normal;
-}
-
-.verses1 {
-    padding-left: 30px;
-    width: 27.9px;
-    animation: show 6230ms ease 0s infinite normal;
-    -moz-animation: show 6230ms ease 0s infinite normal;
-    -o-animation: show 6230ms ease 0s infinite normal;
-    -webkit-animation: show 6230ms ease 0s infinite normal;
-}
-
-.test2 {
-    animation: show 9s linear 0s infinite normal;
-    -moz-animation: show 9s linear 0s infinite normal;
-    -o-animation: show 9s linear 0s infinite normal;
-    -webkit-animation: show 9s linear 0s infinite normal;
-}
-
-.test3 {
-    animation: show 6s ease-in 0s infinite normal;
-    -moz-animation: show 6s ease-in 0s infinite normal;
-    -o-animation: show 6s ease-in 0s infinite normal;
-    -webkit-animation: show 6s ease-in 0s infinite normal;
-}
-
-.verses4 {
-    padding-left: 76.3px;
-    animation: show 7730ms ease-in-out 0s infinite normal;
-    -moz-animation: show 7730ms ease-in-out 0s infinite normal;
-    -o-animation: show 7730ms ease-in-out 0s infinite normal;
-    -webkit-animation: show 7730ms ease-in-out 0s infinite normal;
-}
-
-.verses5 {
-    padding-left: 24.9px;
-    animation: show 3500ms ease-out 0s infinite normal;
-    -moz-animation: show 3500ms ease-out 0s infinite normal;
-    -o-animation: show 3500ms ease-out 0s infinite normal;
-    -webkit-animation: show 3500ms ease-out 0s infinite normal;
-}
-
-.verses6 {
-    padding-left: 57px;
-    animation: show 6770ms ease-out 0s infinite normal;
-    -moz-animation: show 6770ms ease-out 0s infinite normal;
-    -o-animation: show 6770ms ease-out 0s infinite normal;
-    -webkit-animation: show 6770ms ease-out 0s infinite normal;
-}
-
-.verses9 {
-    animation: show 7370ms ease-in 0s infinite normal;
-    -moz-animation: show 7370ms ease-in 0s infinite normal;
-    -o-animation: show 7370ms ease-in 0s infinite normal;
-    -webkit-animation: show 7370ms ease-in 0s infinite normal;
-}
-
-.test6 {
-    animation: show 5500ms ease 0s infinite normal;
-    -moz-animation: show 5500ms ease 0s infinite normal;
-    -o-animation: show 5500ms ease 0s infinite normal;
-    -webkit-animation: show 5500ms ease 0s infinite normal;
-}
-
-.verses12 {
-    animation: show 5400ms ease-in-out 0s infinite normal;
-    -moz-animation: show 5400ms ease-in-out 0s infinite normal;
-    -o-animation: show 5400ms ease-in-out 0s infinite normal;
-    -webkit-animation: show 5400ms ease-in-out 0s infinite normal;
-}
-
-.verses11 {
-    animation: show 6600ms ease-out 0s infinite normal;
-    -moz-animation: show 6600ms ease-out 0s infinite normal;
-    -o-animation: show 6600ms ease-out 0s infinite normal;
-    -webkit-animation: show 6600ms ease-out 0s infinite normal;
-}
-
-.verses10 {
-    animation: show 7200ms ease-in 0s infinite normal;
-    -moz-animation: show 7200ms ease-in 0s infinite normal;
-    -o-animation: show 7200ms ease-in 0s infinite normal;
-    -webkit-animation: show 7200ms ease-in 0s infinite normal;
-}
-
-.right {
-    float: right;
-    padding-right: 20px;
-    padding-left: 0;
-    z-index: 1;
-    max-height: 100%;
-}
-
-.asdff {
-    animation: bigsize 1s;
-}
-
-.verses11 {
-    padding-right: 68.7px;
-}
-
-.verses10 {
-    padding-right: 23.1px;
-}
-
-.verses7 {
-    padding-right: 17.8px;
-    animation: show 7820ms ease 0s infinite normal;
-    -moz-animation: show 7820ms ease 0s infinite normal;
-    -o-animation: show 7820ms ease 0s infinite normal;
-    -webkit-animation: show 7820ms ease 0s infinite normal;
-}
-
-.home {
-    background-image: url(../img/background.png);
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-.shade {
-    width: 100%;
-    position: absolute;
-    float: right;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-}
-
-.logo {
-    text-align: center;
-    position: absolute;
-    animation: transparent 5s;
-    -moz-animation: transparent 5s;
-    -webkit-animation: transparent 5s;
-    -o-animation: transparent 5s;
-    left: 50%;
-    top: 19.625%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-}
-
-.down {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    bottom: 0;
-    z-index: 4;
-    animation: movement 3s ease 0s infinite alternate;
-    -moz-animation: movement 3s ease 0s infinite alternate;
-    -webkit-animation: movement 3s ease 0s infinite alternate;
-    -o-animation: movement 3s ease 0s infinite alternate;
-}
-
-.palace {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    left: 0;
-}
-
-@keyframes transparent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-moz-keyframes transparent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-o-keyframes transparent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-webkit-keyframes transparent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-webkit-keyframes movement {
-    0% {
-        bottom: 20px;
-    }
-    100% {
-        bottom: 0px;
-    }
-}
-
-@-webkit-keyframes show {
-    0% {
-        top: -100%;
-    }
-    100% {
-        top: 80%;
-    }
-}
-
-@-webkit-keyframes bigsize {
-    0% {
-        background-size: 100% 100%;
-    }
-    100% {
-        background-size: 100% 150%;
-    }
+.footer-icon {
+    height: 28px;
+    width: 155px;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    padding-right: 15px;
+    border-color: #FFFFFF;
+    margin-right: 17px;
 }
 
 p {
-    text-align: justify;
+    margin: 0
 }
 
-.preface-main {
-    background: #dbcbad;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: absolute;
-    z-index: 2;
-}
-
-.preface-content {
-    width: 50%;
-}
-
-.preface-img {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.preface-img img {
-    width: 60%;
-}
-
-.preface-title p:first-child {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #000000;
-    letter-spacing: 0;
-}
-
-.preface-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #949494;
-    letter-spacing: 0;
-    line-height: 18px;
-}
-
-.preface-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
-
-.preface-text {
-    font-family: SimSun;
-    font-size: 14px;
-    color: #333333;
-    letter-spacing: 0.88px;
-    line-height: 28px;
-    text-indent: 2em;
-    text-align: justify;
-    padding-top: 87px;
-}
-
-.preface-title {
-    padding-left: 102px;
-}
-
-.history-img {
-    position: relative;
-    bottom: -3px;
-    width: 100%;
-}
-
-.history-main {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.history-straight {
-    width: 1128px;
-    height: 1px;
-    margin: 115px 83px 26px;
-    background: #ccc;
-    padding: 0 0.5rem
-}
-
-.history-text {
-    padding-left: 88px;
-    display: flex;
-    z-index: 100;
-    height: 30%;
-    min-height: 200px;
-}
-
-.history-title {}
-
-.history-title p {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #000000;
-    letter-spacing: 0;
-}
-
-.history-title .subhead {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #949494;
-    letter-spacing: 0;
-    line-height: 18px;
-}
-
-p.subhead:first-letter {
-    font-size: 20px;
-}
-
-.history-introduce {
-    padding-left: 107px;
-    overflow: hidden;
-    width: 864px;
-    height: 239px;
-    font-family: SimSun;
-    color: #333333;
-    letter-spacing: 0.88px;
-}
-
-.history-text ul {}
-
-.history-li li {
-    font-size: 18px;
-    color: #858585;
-    letter-spacing: 1.5px;
-    padding-top: 44px;
-    text-align: left;
-    width: 200px;
-    cursor: pointer;
-}
-
-.history-li {
-    text-align: left;
-    top: 30.875%;
-    left: 181px;
-    font-size: 18px;
-    color: #858585;
-    letter-spacing: 1.5px;
-    position: absolute;
-    z-index: 101;
-}
-
-li {
-    list-style-type: none;
-}
-
-.perface-main {
-    background-color: #622020;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
-
-.perface-article {
-    width: 90%;
-    margin: 0 auto;
-    height: 30%;
-    display: flex;
-    margin-top: 7rem;
-}
-
-.perface-detail,
-.story-detail,
-.figure-detail {
-    position: absolute;
-    width: 50%;
-    overflow: auto;
-    height: 100%;
-    right: 0;
-    background-color: #FFF;
-    z-index: 1;
-    -moz-box-shadow: -1px 2px 5px #B3B3B3;
-    -webkit-box-shadow: -1px 2px 5px #B3B3B3;
-    box-shadow: -1px 2px 5px #B3B3B3;
-}
-
-.perface-title {
-    padding-left: 92px;
-    padding-right: 122px;
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-    margin-top: 1rem;
-}
-
-.arrows {
-    height: 36px;
-    width: 36px;
-    position: absolute;
-    right: 3%;
-    top: 3%;
-}
-
-.arrows img {
-    /* background: url(../img/arrows.png); */
-    transform: scale(-1, 1);
-}
-
-.perface-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-    line-height: 18px;
-}
-
-.perface-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
-
-.perface-text {
-    width: 837px;
-    overflow: hidden;
-    font-family: SimSun;
-    color: #FFFFFF;
-    letter-spacing: 0.88px;
-    line-height: 28px;
-}
-
-.perface-img {
-    background: url(../img/perface.png);
-    background-size: 100% 100%;
-    width: 1077px;
-    height: 400px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.perfaces {
-    position: absolute;
-    display: inline-block;
-}
-
-.perfaces-label {
-    height: 200px;
-    width: 45px;
-    background: url(../img/label.png) no-repeat;
-    margin: 0 auto;
-    visibility: hidden;
-}
-
-
-/* .perfaces>div {
-    width: 200px;
-    height: 100px;
-} */
-
-.hzd {
-    height: 100px;
-    width: 100px;
-}
-
-.hzd-place {
-    left: 0;
-}
-
-.wydh {
-    height: 120px;
-}
-
-.wym {
-    height: 200px;
-    width: 200px;
-}
-
-.wym-place {
-    position: relative;
-}
-
-.wyd {
-    height: 100px;
-    width: 180px;
-}
-
-.wyd-place {
-    top: -10%;
-    left: 42%;
-}
-
-.ndd-place {
-    right: 35px;
-}
-
-.ndd {
-    height: 100px;
-    width: 100px;
-}
-
-.hsz-place {
-    right: 20%;
-    top: -25%;
-}
-
-.hsz {
-    width: 100px;
-    height: 100px;
-}
-
-.hszh {
-    height: 120px;
-}
-
-.ydt-place {
-    left: 20%;
-    top: -25%;
-}
-
-.jsd-place {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -105px;
-}
-
-.jsdh {
-    height: 110px;
-}
-
-.jsd {
-    width: 155px;
-    height: 75px;
-}
-
-.perfaces p {
-    width: 10px;
-    position: relative;
-    left: 16px;
-    font-size: 15px;
-    top: 15px;
-    line-height: 21px;
-}
-
-.department-main {
-    background-image: url(../img/departmentbg.png);
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    text-align: justify;
-}
-
-.department-article {
-    flex: 1;
-    /* width: 50%; */
-    margin-top: 7rem;
-}
-
-.department-title {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.department-title p {
-    text-align: center;
-}
-
-.department-title p:first-child {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-}
-
-.department-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-    line-height: 18px;
-    margin: 1rem 0rem;
-}
-
-.department-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
-
-.department-text {
-    width: 523px;
-    overflow: hidden;
-    margin: 0 auto;
-    font-family: 'SimSun';
-    font-size: 14px;
-    color: #FFFFFF;
-    letter-spacing: 0.88px;
-    line-height: 28px;
-    text-indent: 2em;
-    padding-top: 13px;
-}
-
-.department-accordion {
-    /* flex: 1; */
-    width: 684px;
-    display: flex;
-}
-
-.base {
-    height: 100%;
-    width: 114px;
-    background: rgba(0, 0, 0, 0.60);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.unfold {
-    width: 0px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.60);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 12px;
-    /* display: none; */
-    text-indent: 2em;
-}
-
-.unfold>p {
-    padding: 30px
-}
-
-.base-title {
-    writing-mode: vertical-rl;
-    font-family: SimSun;
-    font-size: 16px;
-    color: #FFFFFF;
-    letter-spacing: 3.64px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.base-title p {
-    padding: 14px 0 10px;
-}
-
-.base-title img:last-child {
-    transform: scale(1, -1);
-}
-
-.publication-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-    background: url(../img/publication.png) no-repeat;
-    background-size: 100% 100%;
-}
-
-.publication-bookcase {
-    height: 100%;
-    position: relative;
-    margin-right: 43px;
-    margin-left: 101px;
-}
-
-.publication-bookcase img:first-child {
-    position: absolute;
-    /* left: 14%; */
-    left: -64px;
-    bottom: 16px;
-    z-index: 6;
-}
-
-.publication-bookcase img:nth-child(2) {
-    bottom: -110px;
-    position: relative;
-    width: 407px;
-    height: 676px;
-    /* min-width: 449px; */
-}
-
-.publication-content {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.publication-title p:first-child {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #000;
-    letter-spacing: 0;
-    margin: 0;
-}
-
-.publication-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #333333;
-    letter-spacing: 0;
-    line-height: 18px;
-    margin: 1em;
-}
-
-.publication-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
-
-.publication-text {
-    text-align: justify;
-    text-indent: 2em;
-    margin-right: 47px;
-}
-
-.publication-text2 {
-    text-align: justify;
-    text-indent: 2em;
-    width: 51.067%;
-    padding-top: 4em;
-}
-
-.publication-text,
-.publication-text2 {
-    font-family: SimSun;
-    font-size: 14px;
-    color: #333333;
-    letter-spacing: 0.88px;
-    line-height: 28px;
-    overflow: hidden;
-}
-
-#kangxi {
-    height: 58.75%;
-    position: absolute;
-    bottom: 26px;
-    right: 0;
-}
-
-.technology-main {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    overflow-y: hidden;
-    font-family: SimSun;
-    font-size: 44px;
-    color: #FFFFFF;
-    line-height: 61px;
-    position: relative;
-}
-
-.technology-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    position: relative;
-    background-image: url(../img/mu.png);
-    background-size: cover;
-    /* animation: mymove 3s;
-    -webkit-animation: mymove 3s; */
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    z-index: 2;
-    /* Safari 和 Chrome */
-}
-
-.technology-spical {
-    display: flex;
-    width: 11.8rem;
-    flex-wrap: wrap;
-}
-
-.technology-spical div {
-    border: 0.5px solid #ccc;
-    position: relative;
-    height: 3.8rem;
-    width: 3.8rem;
-    text-align: center;
-}
-
-.technology-left div p {
-    margin: 0 auto;
-}
-
-.technology-left {
-    width: 50%;
-    background-image: url(../img/tong.png);
-    background-size: cover;
-    z-index: 2;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.technlogy-straight {
-    height: 1px;
-    margin: 14px auto 32px;
-    background: #858585;
-    padding: 0 0.5rem;
-    -webkit-transform: scaleY(.5);
-    transform: scaleY(.5);
-}
-
-.technlogy-artical {
-    bottom: 5%;
-    display: flex;
-    height: 100px;
-}
-
-.technlogy-down {
-    position: absolute;
-    width: 994px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 101px;
-    z-index: 3;
-}
-
-.technlogy-text {
-    font-family: SimSun;
-    font-size: 12px;
-    color: #FFFFFF;
-    letter-spacing: 0.88px;
-    line-height: 24px;
-    text-indent: 2em;
-    /* padding-left: 4rem; */
-    display: flex;
-    text-align: justify;
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-
-.technlogy-text>p {
-    height: 119px;
-    width: 75.655%;
-    line-height: 28px;
-    font-size: 14px;
-    position: absolute;
-    right: 0;
-    top: 32px;
-}
-
-.technlogy-text>img {
-    padding-right: 68px;
-    padding-top: 12px;
-    width: 144px;
-    height: 65px;
-    position: absolute;
-    left: 0;
-}
-
-.technology-introduce {
-    position: absolute;
-    width: calc(50% - 46.5px);
-    padding-left: 46.5px;
-    height: 100%;
-    font-family: SimSun;
-    font-size: 14px;
-    color: #333333;
-    letter-spacing: 0.7px;
-    line-height: 25px;
-    left: 50%;
-    z-index: 1;
-    background: #FFFFFF;
-    overflow-y: scroll;
-    text-align: left;
-    overflow-x: hidden;
-}
-
-.technology-introduce p {
-    width: 80%;
-    margin: 0 auto;
-    text-indent: 2em;
-}
-
-.technology-introduce img {
-    width: 100%
-}
-
-.techology-int {
-    position: absolute;
-    z-index: 1;
-    width: calc(50% - 46.5px);
-    height: 100%;
-    text-align: center;
-    background: #FFFFFF;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.techology-int img {
-    /* width: 30%; */
-    width: 100%;
-    margin: 0 auto;
-}
-
-.techology-int p {
-    width: 80%;
-    margin: 0 auto;
-    text-indent: 2em;
-    color: black;
-    font-family: SimSun;
-    font-size: 14px;
-    color: #333;
-    letter-spacing: 0.65px;
-    line-height: 25px;
-}
-
-.right {
-    /*Safari and Chrome*/
-}
-
-.story-main {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-}
-
-.scroll {
-    width: 3200px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: auto;
-    position: absolute;
-}
-
-.l-scroll,
-.r-scroll {
-    height: 100%;
-    width: 65px;
-    background: url(../img/scroll.png) no-repeat;
-    background-size: cover;
-    z-index: 2;
-}
-
-.l-scroll {
-    position: relative;
-    left: 10px;
-    background: url(../img/left.png) no-repeat;
-}
-
-.scrollsize {
-    width: 100%;
-    height: 72.5%;
-    position: relative;
-    overflow: auto;
-}
-
-.scroll-main {
-    height: 85%;
-    float: right;
-    width: 115px;
-    background: url(../img/scroll-main.png);
-    background-size: 100% 100%;
-    position: absolute;
-    z-index: 1;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    overflow: auto;
-}
-
-.scroll-main img {
-    height: 411px;
-    padding-right: 26px;
-    padding-left: 112px;
-}
-
-.r-scroll {
-    position: relative;
-    left: 50px;
-}
-
-.bgcl {}
-
-.story-title {
-    display: flex;
-    align-items: center;
-    padding-left: 111px;
-    margin: 0 auto;
-    padding-top: 4rem;
-}
-
-.story-title p:first-child {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #000;
-    letter-spacing: 0;
-    margin: 0;
-}
-
-.story-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #333333;
-    letter-spacing: 0;
-    line-height: 18px;
-}
-
-.story-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
-
-.story-rtitle {
-    opacity: 0.48;
+.vertical>p,
+.footer-right>p {
+    opacity: 0.7;
     font-family: STZhongsong;
-    font-size: 56px;
-    color: #7E591D;
-    letter-spacing: 0px;
-    /* letter-spacing: -15px; */
-    writing-mode: vertical-lr;
-    line-height: 60px!important;
-    padding-left: 30px;
-}
-
-.story-rtitle p:first-child {
-    margin-top: -4rem;
-    padding-right: 22px;
-}
-
-.story-rtitle p:nth-child(2) {
-    margin-top: 3rem;
-    font-size: 38px;
-}
-
-.story-button,
-.figure-button {
-    background: url(../img/button.png) no-repeat;
-    position: absolute;
-    height: 20px;
-    width: 58px;
-    right: 57px;
-    background-size: 100% 100%;
-    display: flex;
-}
-
-.figure-button {
-    top: 85.4px;
-    height: 20px;
-    width: 58px;
-}
-
-.vertical-stright {
-    width: 1px;
-    height: 320px;
-    border: 1px solid #CCCCCC;
-    border-style: none solid none none;
-    /* margin: 0 2rem; */
-    padding-right: 44px;
-}
-
-.story-fire {
-    width: 500px;
-    min-width: 350px;
-    height: 100%;
-    display: flex;
-    padding-left: 90px;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-}
-
-.particulars {
-    width: 93%;
-    margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 23px;
-}
-
-.story-fire img {
-    height: 200px;
-    margin: 0 auto;
-}
-
-.story-fire p {
-    font-family: SimSun;
     font-size: 14px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.vertical>p {
+    letter-spacing: 2.1px;
+}
+
+.footer-right {
+    top: 40px;
+    right: 157px;
+    width: 571px
+}
+
+
+/* 正文样式 */
+
+.main-body {
+    width: 1004px;
+    margin: 0 auto 90px;
+    /* height: 1000px; */
+    /* background: #333333; */
+}
+
+.main-text {
+    font-family: "STZHONGS";
+    font-size: 16px;
     color: #333333;
-    letter-spacing: 0.88px;
-    line-height: 26px;
+    letter-spacing: 0;
+    text-align: justify;
     text-indent: 2em;
-    text-align: justify;
+    line-height: 28px;
 }
 
-#button {
-    width: 104px;
-    height: 38px;
-    border: 1px solid #CCCCCC;
-    color: black;
-    background-color: #FFFFFF;
-    line-height: 38px;
-    margin-top: 30px;
+.img-box {
+    background: #FFFFFF;
+    box-shadow: 0 5px 10px 0 rgba(43, 95, 164, 0.10);
+    height: 280px;
+    width: 390px;
 }
 
-.newbutton {
-    width: 104px;
-    height: 38px;
-    border: 1px solid #CCCCCC;
-    color: black;
-    background-color: rgba(0, 0, 0, 0);
-    line-height: 38px;
-    margin-top: 30px;
-    font-size: 14px;
-    text-align: center;
+.img-box>p {
+    padding: 19px 30px 20px;
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.08px;
 }
 
-.ddwq {
-    width: 104px;
-    height: 38px;
-    border: 1px solid #CCCCCC;
-    color: black;
-    background-color: rgba(0, 0, 0, 0);
-    line-height: 38px;
-    margin-top: 30px;
-    font-size: 14px;
+.arrow {
+    text-align: right;
 }
 
-.newbutton>p {
-    line-height: 38px;
-    left: -3px;
-    position: relative;
+.left-arrow,
+.right-arrow {
+    width: 54px;
+    height: 54px;
+    background: #2B5FA4 url(../img/left-arrow.png) no-repeat center;
+    box-shadow: 0 3px 10px 0 rgba(43, 95, 164, 0.30);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
 }
 
-#story-left,
-#story-right,
-#figure-left,
-#figure-right {
-    flex: 1;
-    height: 100%;
+.right-arrow {
+    background: #2B5FA4 url(../img/right-arrow.png) no-repeat center;
+    opacity: 0.3;
 }
 
-#figure-left,
-#figure-right {
-    z-index: 2;
-}
 
-.story-text {
-    width: 329px;
-    font-size: 14px;
-    text-align: justify;
-    padding-right: 17px;
-}
+/* 顺治、康熙、雍正三朝宫廷冰上运动 */
 
-.figure-main {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: url(../img/figure-background.png) no-repeat;
-    background-size: 100% 100%;
+.sport {
     display: flex;
-    overflow: hidden!important;
-    z-index: 2;
+    justify-content: center;
     align-items: center;
 }
 
-.figure-content {
-    height: 60%;
-    width: 30%;
-    min-width: 400px;
-    padding: 3rem;
-    z-index: 2;
+.middle {
+    margin: 0 27px;
 }
 
-.figure-title p:first-child {
-    font-family: FZQKBYSJW--GB1-0;
-    font-size: 36px;
-    color: #000;
-    letter-spacing: 0;
-    margin: 0;
+.sport-img>img {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.50);
 }
 
-.figure-title p:nth-child(2) {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #333333;
-    letter-spacing: 0;
-    line-height: 18px;
-    padding: 2rem 0;
+.sport-img>p {
+    text-align: center;
+    margin: 30px 0 90px 0;
 }
 
-.figure-title p:nth-child(2)::first-letter {
-    font-size: 20px;
-}
 
-.figure-text {
-    font-family: SimSun;
-    font-size: 14px;
-    color: #333333;
-    letter-spacing: 0.88px;
-    line-height: 28px;
-    text-indent: 2em;
-    overflow: hidden;
-    text-align: justify;
-}
+/* 冰上运动的起源 */
 
-.figure-people {
-    position: absolute;
-    width: 1800px;
-    height: 80%;
-    /* left: 36%; */
-    top: 20%;
-    display: flex;
-    z-index: 2;
-}
-
-.figure-people>div {
-    width: 250px;
-    padding-right: 3rem;
-    position: relative;
-}
-
-.figure-people div img {
-    display: block;
-}
-
-.figure-people div img:hover {}
-
-.figure-people div p:nth-child(5) {
-    font-size: 22px;
-    padding-bottom: 2px;
-    color: #333333;
-    letter-spacing: 1px;
-    padding-top: 20px;
-}
-
-.figure-people div p:nth-child(6) {
-    font-size: 14px;
-    color: #999999;
-    padding-bottom: 15px;
-    letter-spacing: 0.88px;
-    line-height: 24px;
-}
-
-.figure-people div p:nth-child(7) {
-    font-size: 12px;
-    color: #333333;
-    letter-spacing: 0.75px;
-    line-height: 20px;
-}
-
-.figure-people>div>span {
-    position: absolute;
-    right: 0;
-}
-
-.span111 {
-    font-family: Constantia-Bold;
-    font-size: 37px;
-    color: #333333;
-    letter-spacing: 0.93px;
-    font-size: 37px;
-    color: #333333;
-    letter-spacing: 0.93px;
-}
-
-.span222 {
-    top: 47px;
-    font-family: SimSun;
-    font-size: 12px;
-    color: #999999;
-    letter-spacing: 1px;
-}
-
-.end-main {
-    width: 100%;
-    height: 100%;
-    background: black url(../img/engbackground.png) no-repeat center;
-    /* background-size: cover; */
+.origin {
     display: flex;
 }
 
-.end-text {
-    height: 529px;
-    width: 265px;
-    text-indent: 2em;
-    top: 99px;
-    overflow: hidden;
-    /* padding-left: 4em; */
-    /* padding: 1rem 6rem 0rem 7rem; */
-    text-align: justify;
-    position: absolute;
+.origin>span {
+    writing-mode: tb;
+    padding-right: 14px;
 }
 
-.end-logo {
-    position: absolute;
-    left: 599px;
-    top: 99px;
+.origin>img {
+    padding-right: 27px;
 }
 
-.end-logo>img {
-    width: 352px;
-    height: 201px;
+.origin-text {
+    width: 712px;
 }
 
-.end-text p {
-    font-family: SimSun;
-    padding-bottom: 2em;
-    font-size: 14px;
-    color: #FFFFFF;
-    letter-spacing: 0.88px;
-    line-height: 26px;
+.origin-text>p {
+    padding-bottom: 30px;
 }
 
-.end-left {
-    padding-left: 68px;
-}
 
-.end-right {
-    right: 0;
-    padding-right: 79px;
-}
+/* 历史脉络 */
 
-.bookcase-main {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: #C4BEA8;
-    overflow: auto;
-}
-
-.anniu {
-    position: absolute;
-    height: 36px;
-    width: 36px;
-    z-index: 2;
-    right: 0;
-    top: 47px;
-    right: 44px;
-}
-
-.anniu>img {
-    width: 100%;
-    height: 100%;
-    -moz-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1);
-    /*IE*/
-    filter: FlipH;
-}
-
-.jiantou {
-    position: absolute;
-    top: 434px;
-    right: 10px;
-    z-index: 3;
-    height: 30px;
-    width: 100px;
-    background: url(../img/button.png) no-repeat;
-    background-size: 100% 100%;
-    transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    -moz-transform: rotate(90deg);
-    /* Firefox */
-    -webkit-transform: rotate(90deg);
-    /* Safari 和 Chrome */
-    -o-transform: rotate(90deg);
-    /* Opera */
+.venation-content {
     display: flex;
+    margin-top: 45px;
 }
 
-.jiantou>div {
-    width: 50%;
-    height: 100%;
+.venation-content>img {
+    height: 413px;
+    width: 341px;
 }
 
-.bookcase-case {
-    top: 59px;
-    position: absolute;
-    width: 1235px;
-    height: 1891px;
-    right: 78px;
-    /* left: 50%;
-    transform: translateX(-50%); */
-    background: url(../img/bookcasemain.png);
-    background-size: 100% 100%;
-    text-align: left;
+.venation-title>p {
+    writing-mode: tb;
 }
 
-.book {
-    overflow: hidden;
-    position: relative;
-    top: 100px;
-    left: 145px;
-    display: inline-block;
-    padding-left: 26px;
+.venation-title {
+    margin-top: 5px;
+    margin-right: 15px;
 }
 
-.book,
-.book img,
-.cover {
-    height: 226px;
-    width: 152px;
+.venation-vertical {
+    height: 12px;
+    width: 1px;
+    background-color: #666666;
+    margin: 10px auto 8px;
 }
 
-.bookcase-floor {
-    height: 342px;
-    /* float: right; */
-}
-
-.bookcase-sign {
-    float: right;
-    position: relative;
-    right: 150px;
-    top: 14px;
-    width: 180px;
-}
-
-.secondfloor {
-    margin-top: -25px;
-    padding-top: 10px;
-}
-
-
-/* .bookcase-case div:last-child {
-    padding-bottom: 1rem;
-} */
-
-.cover {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-.books img {
-    /* height: 172px;
-    width: 105px;
-    position: relative;
-    top: 65px;
-    left: 167px;
-    padding-right: 35px; */
-}
-
-.books img:first-child {}
-
-.arr-right,
-.arr-left {
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-}
-
-.arr-left {
-    transform: scale(-1, 1);
-    right: 13%;
-}
-
-.story-detail {
-    z-index: 4;
-    right: -50%;
-    display: none;
-}
-
-.publication-title p {
-    text-align: center;
-}
-
-.perface-particulars img {
-    width: 100%;
-}
-
-.perface-particulars {
-    text-align: left;
-}
-
-.perface-particulars :nth-child(2) {}
-
-.pinyin,
-.mingcheng {
-    opacity: 0.8;
-    font-family: TrajanPro3-Regular;
-    font-size: 18px;
-    color: #999999;
-    letter-spacing: 0;
-    line-height: 18px;
-}
-
-.particulars>span {}
-
-.perface-particulars :nth-child(4) {}
-
-.figure-detail {
-    right: -50%;
-    z-index: 3;
-}
-
-.figure-scroll {
-    height: 100%;
-    flex: 1;
-    overflow: auto;
-    position: relative;
-}
-
-.figure-detext {
-    width: 100%;
-    overflow: auto;
-}
-
-.figure-detext>img {
-    width: 60%;
-}
-
-.figure-detext>p {
-    width: 60%;
-    margin: 0 auto;
-    text-align: justify;
-    text-indent: 2em;
-    font-size: 12px;
-}
-
-.show-nav {
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-    left: -20%;
-    width: 19.028%;
-    overflow: auto;
-    text-align: center;
-    background: url(../img/long.png) no-repeat center;
-    background-color: #212121;
-}
-
-.show-nav>img {
-    width: 104px;
-    height: 80px;
-    padding-top: 20px;
-}
-
-.show-nav>ul>li {
-    color: #fff;
-}
-
-.show-nav>ul>li:nth-child(even) {
-    color: #414141;
-    padding: 6px;
-}
-
-.intrs {
-    width: 100%;
-    height: 100%;
-}
-
-.open-text>p {
-    padding-top: 13.5%;
-}
-
-.story-detext {
-    /* text-align: center; */
-    overflow: auto;
-}
-
-.story-detext img {
-    width: 80%
-}
-
-.story-detext>p {
-    text-align: justify;
-    width: 80%;
-    font-size: 14px;
-    margin: 0 auto;
-    text-indent: 2em;
-    padding-bottom: 2em;
-}
-
-.publication-content div {
-    position: relative;
-}
-
-.publication-title {
-    padding-bottom: 26px;
-    padding-top: 15.25%;
-}
-
-#flipbook>div {
-    background-color: #fff
-}
-
-.cover p {
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-    font-size: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.end-end {
-    /* background: url(../img/shade.png) 100% 100%; */
-    position: absolute;
-    bottom: 0%;
-    width: calc(100% - 93px);
-}
-
-.end-end>img {
-    bottom: 0;
-}
-
-.end-shade {
-    width: 100%;
-    position: absolute;
-    left: -93px;
-}
-
-.end-return {
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-}
-
-.godown {
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    -webkit-animation: slideInDown 1s ease 0s infinite alternate;
-    /* animation: movement 3s ease 0s infinite alternate; */
-}
-
-.preface-title {
-    text-align: left;
-    padding-top: 220px;
-    padding-left: 195px;
-}
-
-.animate1 {
-    -webkit-animation: fadeInLeftBig 1s ease 0s;
-}
-
-.animate2 {
-    -webkit-animation: fadeInRightBig 1s ease 0s;
-}
-
-.preface-text {
-    overflow: hidden;
-    margin-left: 195px;
-}
-
-.none {
-    display: none;
-}
-
-p,
-div {
-    line-height: 28px;
-    letter-spacing: 0.88px;
-}
-
-.detailname {
-    font-size: 20px;
-    color: #333333;
-    letter-spacing: 1.67px;
-    padding-left: 41px;
-}
-
-.detailinfo {
-    padding-top: 40px;
-    padding-bottom: 14px;
-    text-align: left;
-}
-
-.detail-straight {
-    width: 635px;
-    height: 1px;
-    margin-left: 41px;
-    background: #979797;
-    margin-bottom: 32px;
-}
-
-.hard {
-    /* background: url(../img/largebooks/1.png) no-repeat;
-    background-size: 100% 100%; */
-    height: 100%;
-    width: 100%;
-}
-
-.hard>img {
-    width: 100%;
-    height: 100%;
-}
-
-.hard2 {
-    height: 100%;
-    width: 100%;
+.show {
+    height: 60px;
+    width: 2px;
+    margin: 11px auto 10px;
     background-color: #333333;
 }
 
-.bookstyle {
+.showp {
+    color: #333333
+}
+
+.venation-bottom {
+    position: relative;
+    flex: 1;
+    margin-left: 50px;
+}
+
+.venation-text {
+    background: url(../img/venation-bg.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.venation-text>p {
+    color: white;
     font-size: 14px;
+    margin: 34px 60px;
+}
+
+
+/* 典制内容 */
+
+.institution {}
+
+.institution-text {
+    padding: 30px;
+    background: url(../img/institution-bg.png)
+}
+
+.institution-content {
+    padding: 30px;
+    background: #FFFFFF url(../img/content-bg.png);
+}
+
+
+/* 冰嬉文化 */
+
+.culture {
+    background: #FFFFFF;
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.culture-content {
+    padding: 60px;
+}
+
+.text-space {
+    padding-top: 30px;
+}
+
+
+/* 冰嬉掌故 */
+
+.anecdote {
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.anecdotes-item {
+    height: 178px;
+    transition: all linear .3s;
+    background: #ffffff;
+    position: relative;
+}
+
+.anecdotes-item-title {
+    padding-top: 42px;
+    padding-bottom: 20px;
+}
+
+.anecdotes-item-title>span {
+    padding-left: 31.7px;
+}
+
+.anecdotes-item>p,
+.anecdotes-item>span,
+.anecdotes-item-title {
+    padding-left: 127px;
+    padding-right: 129px;
+}
+
+.anecdotes-item>p {
+    font-family: STSongti-SC-Regular;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.color1 {
+    background: #F6F9FD;
+}
+
+.anecdotes-item-p {
+    color: #666666;
+}
+
+.anecdotes-item:hover {
+    background: url(../img/分组\ copy.svg);
+    color: #FFFFFF;
+}
+
+.anecdotes-item::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 178px;
+    background: url(../img/anecdotes-choose.svg) no-repeat;
+    /* transition: width linear .3s; */
+}
+
+.anecdotes-item::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    width: 0%;
+    height: 178px;
+    background: url(../img/right-arrow.png) no-repeat center;
+    transition: all linear .3s;
+    /* display: none; */
+}
+
+.anecdotes-item:hover::before {
+    width: 20%;
+}
+
+.anecdotes-item:hover::after {
+    /* display: block; */
+    width: 10%;
+}
+
+.anecdotes-item:hover .anecdotes-item-p {
+    color: #FFFFFF;
+}
+
+
+/* 冰嬉图赋-诗篇列表页 */
+
+.poem-items {
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.poem-item {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: all linear .3s;
+}
+
+.poem-item:nth-child(odd) {
+    background: #F6F9FD;
+}
+
+.poem-item:nth-child(even) {
+    background: #FFFFFF;
+}
+
+.poem-item:hover {
+    background: #2B5FA4;
+    box-shadow: 0 5px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.poem-item:hover .poem-item-title,
+.poem-item:hover .poem-item-author {
+    color: #FFFFFF;
+}
+
+.poem-icon {
+    height: 22px;
+    width: 29px;
+    background: #4680CC;
+    border-radius: 2px;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    margin-left: 130px;
+}
+
+.poem-icon>p {
+    text-align: center;
+    line-height: 22px;
+}
+
+.poem-item-title {
+    padding-left: 35px;
+    font-family: STZhongsong;
+    font-size: 22px;
     color: #333333;
     letter-spacing: 0;
-    line-height: 28px;
+}
+
+.poem-item-author {
+    padding-left: 598px;
+    font-family: STSongti-SC-Regular;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.poem-item::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url(../img/anecdotes-choose.svg) no-repeat;
+    transition: width linear .3s;
+}
+
+.poem-item::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    width: 0%;
+    height: 100%;
+    background: url(../img/right-arrow.png) no-repeat center;
+    transition: all linear .3s;
+    /* display: none; */
+}
+
+.poem-item:hover::before {
+    width: 20%;
+}
+
+.poem-item:hover::after {
+    width: 10%;
+}
+
+
+/* 冰嬉掌故详情页 */
+
+.anedetail {
+    /* display: flex; */
+    position: relative;
+}
+
+.anedetail-text {
+    padding: 70px
+}
+
+.anedetail-content {
+    height: 701px;
+    vertical-align: top;
+    display: inline-block;
+    width: 877px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px 0 rgba(43, 95, 164, 0.20);
+}
+
+.anedetail-title {
+    background: url(../img/anedetail-title.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.anedetail-right {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.anedetail-title {
+    padding: 33px 20px;
+}
+
+.anedetail-title>p {
+    writing-mode: tb;
+    color: white;
+}
+
+.return {
+    background: url(../img/return.svg) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 20px;
+}
+
+.return>p {
+    padding: 33px 20px;
+    writing-mode: tb;
+    color: white;
+}
+
+
+/* 诗篇详情页 */
+
+.poemdetail {
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.poemdetail-content {
+    width: 750px;
+    height: 648px;
+    position: relative;
+    background: #FFFFFF;
+    margin: 0 auto;
+    display: block;
+    z-index: 2;
+    box-shadow: 0 10px 10px 0 rgba(0, 81, 152, 0.10);
+}
+
+.poemdetail-text {
+    padding: 60px 67px;
+    text-align: center;
+}
+
+.poemdetail-text>p {
+    text-align: center;
+}
+
+.poemdetail-title {
+    font-family: STZhongsong;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 1.12px;
+    text-align: justify;
+}
+
+.poemdetail-author {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0.75px;
+    text-align: justify;
+    padding-top: 20px;
+}
+
+.poemdetail-author::before {}
+
+.poemdetail-time {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0.75px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+.poemdetail-time>span {
+    padding-left: 10px;
+    line-height: 22px
+}
+
+.poemdetail-poem {
+    padding-top: 30px;
+}
+
+.poemdetail-poem>p {
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.poemdetail-right {
+    position: absolute;
+    top: 0;
+    right: -76px;
+}
+
+.poemdetail-return {
+    background: url(../img/return.svg) no-repeat;
+    background-size: 100% 100%;
+    height: 114px;
+    /* margin-left: 44px; */
+    width: 32px;
+    color: white;
+    display: flex;
+    writing-mode: tb;
+    justify-content: center;
+    align-items: center;
+}
+
+.poemdetail-return>p {}
+
+.poemdetail-remark {
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #999999;
+    letter-spacing: 0.96px;
+    text-align: justify;
+    line-height: 30px;
+    padding-top: 60px;
+}
+
+.poem-bg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1
+}
+
+
+/* 冰嬉盛况 */
+
+.occasion-items {
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.occasion-item {
+    width: 100%;
+    height: 178px;
+    padding: 42px 127px 0;
+    position: relative;
+}
+
+.occasion-item:nth-child(odd) {
+    background: #F6F9FD;
+}
+
+.occasion-item:nth-child(even) {
+    background: #FFFFFF;
+}
+
+.occasion-item:hover {
+    background: #2B5FA4;
+    box-shadow: 0 5px 10px 0 rgba(43, 95, 164, 0.20);
+}
+
+.occasion-item>img {
+    padding-top: 1px;
+    /* filter: hue-rotate(70deg) */
+}
+
+.occasion-item>span {
+    font-family: STZhongsong;
+    font-size: 22px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.occasion-item>p {
+    font-family: STSongti-SC-Regular;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 24px;
+    padding-top: 20px;
+}
+
+.occasion-item:hover span,
+.occasion-item:hover p {
+    color: white;
+}
+
+.occasion-item:hover img {
+    /* filter: brightness(100); */
+    /* filter: url(#change); */
+}
+
+.occasion-item:hover #img1 {
+    content: url(../img/冰嬉盛况白色icon/冰嬉盛况icon1\ copy.svg)
+}
+
+.occasion-item::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url(../img/anecdotes-choose.svg) no-repeat;
+    transition: width linear .3s;
+}
+
+.occasion-item::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    width: 0%;
+    height: 100%;
+    background: url(../img/right-arrow.png) no-repeat center;
+    transition: all linear .3s;
+    /* display: none; */
+}
+
+.occasion-item:hover::before {
+    width: 20%;
+}
+
+.occasion-item:hover::after {
+    width: 10%;
+}
+
+
+/* 历史上的冰嬉百年 */
+
+.history {
+    background: url(../img/dragon.png) no-repeat;
+}
+
+.history-calendar {
+    width: 100%;
+    height: 848px;
+    position: relative;
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+    background: url(../img/dd1.png) no-repeat;
+    background-position: 0 60%;
+}
+
+.calendar-title {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background: url(../img/calendar-title.svg) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-middle {
+    position: relative;
+    /* height: 100%; */
+}
+
+.title-middle>span {
+    font-family: STZhongsong;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-right: 35px;
+}
+
+.calendar-head {
+    position: relative;
+    bottom: 14px;
+    margin: 0 8px 0 14px;
+}
+
+.calendar-content {
+    width: 100%;
+    padding: 50px 19px 50px 83px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.calendar-item {
+    width: 56px;
+    height: 42px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-right: 56px;
+    margin-bottom: 25px;
+}
+
+.calendar-item>p:first-child,
+.calendar-item>p:nth-child(2) {
+    font-family: SimSun;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+}
+
+.calendar-item>p:nth-child(2) {
+    line-height: 17px;
+    margin-top: 5px;
+}
+
+.wave {
+    position: absolute;
+    height: 400px;
+    bottom: 0;
+    width: 100%;
+}
+
+.history-intro {
+    width: 100%;
+    height: 142px;
+    position: absolute;
+    bottom: 45px;
+}
+
+.div1 {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 82px;
+    right: 82px;
+    background: url(../img/intro.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.greenperson {
+    position: absolute;
+    bottom: -26px;
+    left: -67px;
+}
+
+.yellowperson {
+    position: absolute;
+    bottom: -26px;
+    right: -67px;
+}
+
+.talkbox {
+    position: absolute;
+    bottom: 173px;
+    right: 63px;
+    background: url(../img/talkbox.png) no-repeat;
+    background-size: 100% 100%;
+    height: 181px;
+    width: 300px;
+}
+
+.talkbox>p {
+    margin-left: 29px;
+}
+
+.talkbox-title {
+    line-height: 56px;
+    font-family: STZhongsong;
+    font-size: 17px;
+    color: #333333;
+    letter-spacing: 0.09px;
     text-align: left;
 }
 
-.pages {
+.div1>p {
+    font-family: SimSun;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.07px;
+    text-align: justify;
+    line-height: 24px;
+    padding: 30px 40px;
+    text-indent: 2em;
+}
+
+
+/* 赛事地点 */
+
+.site {}
+
+.site>p {}
+
+.site-map {
+    position: relative;
+}
+
+.site-map-img {
+    position: relative;
+    top: -114px;
+    left: -200px;
+    width: 800px;
+}
+
+.site-text {
+    position: absolute;
+    right: 0;
+    top: 54px;
+    background: #F4F9FF;
+    box-shadow: 0 10px 10px 0 rgba(43, 95, 164, 0.20);
+    border-radius: 8px;
+    height: 533px;
+    width: 390px;
+    padding: 40px 72px 44px 44px;
+    /* border-right: 1px solid #2B5FA4; */
+}
+
+.site-text>p {
+    font-family: SimSun;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.08px;
+    text-align: justify;
+    line-height: 28px;
+    padding-bottom: 20px;
+}
+
+.site-text::after {
+    content: '<div>测试<div>';
+    position: absolute;
+    bottom: 5px;
+    top: 5px;
+    right: 0;
+    width: 1px;
+    height: 99%;
+    background: #2b5fa4;
+    transition: width linear .3s;
+}
+
+
+/* 冰嬉图赋 */
+
+.pandp-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.zhixian {
+    display: inline-block;
+    height: 0;
+    width: 50px;
+    opacity: 0.5;
+    border: 1px solid #2B5FA4;
+    margin: 0 10px;
+}
+
+.pandp-title>span {
+    margin: 0 10px;
+    font-family: STZhongsong;
+    font-size: 22px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.pandp-picture-img {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pandp-picture-text {
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 28px;
+    margin-bottom: 50px;
+    text-indent: 2em;
+}
+
+.cover {
+    height: 420px;
+    width: 146px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.50) url(../img/cover-bg.svg) no-repeat center center;
+    background-size: 134px 408px;
+    top: 100%;
+    /* transition: all linear .3s; */
+}
+
+.picture-img-cover:hover .cover {
+    top: 0%;
+}
+
+.chakanyuantu {
+    background: url(../img/chakanyuantu.svg) no-repeat center center;
+    position: absolute;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chakanyuantu>p {
+    writing-mode: tb-rl;
+    margin: 15px 11px;
+    font-family: STZhongsong;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.jieshao {
+    position: absolute;
+    bottom: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.jieshao>p {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.picture-img-cover {
+    margin-left: 41px;
+}
+
+.pandp-poem-content>div {
+    display: inline-block;
+}
+
+.pandp-poem-content {
+    display: flex
+}
+
+.person {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pandp-bottom {
+    height: 549px;
+    width: 100%;
+    position: relative;
+    background: url(../img/poem-leftbg.png) no-repeat bottom;
+}
+
+.poem-list {
+    display: flex;
+    position: absolute;
+    left: 330px;
+    top: 90px;
+    z-index: 100;
+}
+
+.poem-list-item {
+    height: 290px;
+    padding-top: 38px;
+    width: 97px;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #D1D1D1;
+}
+
+.poem-list-item>p {
+    writing-mode: vertical-lr;
+    margin: 0 auto 0;
+    font-family: STZhongsong;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: justify;
+}
+
+.poem-list-item:hover {
+    opacity: 0.9;
+    background: #E9E8E7;
+}
+
+.more-poem {
+    position: absolute;
+    background: url(../img/morepoem.svg) no-repeat center center;
+    background-size: contain;
+    top: 0;
+    z-index: 2;
+    right: -190px;
+}
+
+.more-poem>p {
+    writing-mode: vertical-lr;
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 30px;
+    padding: 39px 9px;
+}
+
+.right-bg {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    z-index: 1;
+}
+
+.toup {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background: #2B5FA4;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 90px;
+    z-index: 3;
+}
+
+.toup {
+    bottom: 40px;
+}
+
+.share {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 100;
+    background: #2B5FA4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-list {
+    width: 60px;
+    right: 0px;
+    height: 180px;
+    position: absolute;
+    opacity: 0.4;
+    padding-top: 35px;
+    background: #000000;
+    z-index: 4;
+    bottom: -120px;
+    border-top-right-radius: 30px 30px;
+    border-top-left-radius: 30px 30px;
+    transition: all linear .3s;
+}
+
+.share-button {
+    overflow: hidden;
+    height: 210px;
+    width: 60px;
+    bottom: 130px;
+    position: absolute;
+    /* z-index: 3; */
+    right: 90px;
+    border-bottom-right-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+}
+
+.share-button:hover .share-list {
+    bottom: 30px;
+}
+
+.share-list>img {
+    display: block;
+    margin: 0px auto 20px;
+}
+
+
+/* 入关前满族冰上运动与文化内涵 */
+
+.img-title {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: justify;
+    writing-mode: vertical-lr;
+}
+
+.area1 {
+    display: flex;
+}
+
+.area1>img {
+    /* display: flex; */
+    vertical-align: top;
+}
+
+.area2 {
+    position: relative;
+    margin-top: 70px;
+}
+
+.area2-text {
+    background: url(../img/area2.png) no-repeat;
+    background-size: contain;
+    /* display: inline; */
+    /* margin: 46px 82px 47px 60px; */
+}
+
+.area2-text>p {
+    width: 662px;
+    color: #F4F9FF;
+    padding: 46px 82px 47px 60px;
+}
+
+.simg2 {
+    position: absolute;
+    bottom: 0px;
+    left: 615px;
+}
+
+.area3 {
+    margin-top: 70px;
+    padding-bottom: 76px;
+    position: relative;
+}
+
+.area3-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 682px;
+}
+
+
+/* 赛事项目 */
+
+.other {
+    background: url(../img/project-bg.png) no-repeat;
+}
+
+.matchprojects-text1 {
+    background: url(../img/textbg1.png) no-repeat;
+    padding: 37px 60px;
+}
+
+.matchprojects .main-text {
+    color: white;
+}
+
+.project1 {
+    margin-top: 52px;
+    font-size: 0;
+}
+
+.project1>img {
+    padding-right: 90px;
+    padding-left: 3px;
+}
+
+.project1>div {
+    display: inline-block;
+}
+
+.title-span {
+    font-family: STZhongsong;
+    font-size: 22px;
+    color: #333333;
+    letter-spacing: 0.69px;
+    text-align: justify;
+    writing-mode: vertical-lr;
+    vertical-align: middle;
+}
+
+.stright {
+    height: 105px;
+    width: 6px;
+    background: #2B5FA4;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.fine {
+    width: 2px;
+    margin-left: 6px;
+    margin-right: 14px;
+}
+
+.project-title {
+    padding-right: 40px;
+    display: inline-block;
+}
+
+.project1-text {
+    font-family: STZhongsong;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 28px;
+    width: 326px;
+    text-indent: 2em;
+    display: inline-block;
+}
+
+.project2 {
+    padding-top: 74px;
+}
+
+.project1-text.text2 {
+    width: 390px
+}
+
+.project2>.project-title {
+    vertical-align: top;
+}
+
+.project3 {
+    padding-top: 110px;
+}
+
+.project3>img {
+    padding-right: 80px;
+    vertical-align: top;
+    position: relative;
+    top: -36px;
+}
+
+.project-title.text3 {
+    vertical-align: top;
+}
+
+.project1-text.text3 {
+    width: 486px;
+}
+
+.matchprojects-text2 {
+    background: url(../img/ptextbg2.png) no-repeat;
+    padding: 51px 72px 47px;
+    margin-top: 70px;
+}
+
+.matchprojects-text2>p {
+    font-family: STSongti-SC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+
+/* 观赛人员 */
+
+.audience {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.aud-text1 {}
+
+.aud-text1>span {
+    width: 391px;
+    position: absolute;
+    background: #E4EBF3;
+    padding: 67px 43px;
+}
+
+.aud-text2 {
+    position: relative;
+    margin-top: 80px;
+    height: 200px;
+}
+
+.aud-header,
+.aud-icons {
+    display: inline-block;
+}
+
+.aud-icons {
+    position: absolute;
+    right: 0;
+    vertical-align: top;
+    font-size: 0
+}
+
+.aud-icons>p {
+    font-family: STZhongsong;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 26px;
+    width: 713px;
+    margin-top: 30px;
+    text-indent: 2em;
+}
+
+.aud-icon {
+    width: 72px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 50px;
+    vertical-align: top;
+}
+
+.aud-icon:first-child {
+    margin-left: 26px;
+}
+
+.aud-icon>span {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: left;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.aud-text3 {
+    width: 100%;
+    height: 435px;
+    background: #F1F5F9;
+    margin-top: 115px;
+    font-size: 0;
+    position: relative;
+}
+
+.left-text3 {
+    width: 518px;
+    padding-top: 60px;
+    margin-left: 217px;
+    display: inline-block;
+    position: relative;
+}
+
+.right-text3 {
+    display: inline-block;
+    position: relative;
+    top: -50px;
+    padding-left: 69px;
+    vertical-align: top
+}
+
+.poemclass {
+    text-indent: 0;
+}
+
+.aud-text4 {
+    width: 1007px;
+    margin: 122px auto 120px;
+}
+
+.aud-area5 {
+    height: 390px;
+    width: 100%;
+    left: -400px;
+    background: #F1F5F9;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+.swiper-container {
     width: 100%;
     height: 100%;
 }
 
-#kangxi {}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 300px;
+    width: 230px!important;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+}
 
-.swipermain {
-    /* width: calc(100% - 93px)!important; */
-    padding-left: 93px;
+.aud-cover {
+    position: absolute;
+    height: 383px;
+    width: 293px;
+    top: 100%;
+    opacity: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.50)
+}
+
+.swiper-slide-active>.aud-cover {
+    top: 0;
+    opacity: 1;
+    display: initial;
+}
+
+.swiper-slide-active {
+    height: 383px;
+    width: 293px!important;
+}
+
+.aud-covertext {
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    bottom: 0;
+}
+
+.aud-covertext>p {
+    font-family: SimSun;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.07px;
+    text-align: justify;
+    line-height: 18px;
+}
+
+.swiper-slide-active.swiper-slide>div>img {
+    height: 383px;
+    width: 293px!important;
+}
+
+.swiper-slide.swiper-slide-active {
+    position: relative;
+    top: -83px;
+    background-color: #000000;
+}
+
+.swiper-container {
+    overflow: initial;
+}
+
+.aud-arrow {
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    top: -18px;
+}
+
+.aud-left,
+.aud-right {
+    background: #000000;
+    display: inline-block;
+}
+
+.hahaha {
+    position: relative;
+}
+
+.aud-area6 {
+    height: 390px;
+    position: absolute;
+    background: #F1F5F9;
+    width: 400px;
+    top: 0;
+    right: 0;
+}
+
+
+/* 冰嬉图赋详情页面 */
+
+.bigimg {
+    height: 100%;
     overflow: auto;
 }
 
-.getdown {
-    margin-top: 3rem;
+.longimg {
+    height: 100%;
+    width: auto;
 }
 
-.story-text>p {
-    width: 329px;
-    /* padding-bottom: 30px; */
-    text-indent: 2em;
+.fangdajing {
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.70);
+    position: absolute;
+    bottom: 0;
+    font-size: 0;
+    /* display: flex; */
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.figureimg {
-    display: none;
+.pdmain {
+    height: 100%;
+    /* display: flex; */
+    font-size: 0;
+    white-space: nowrap;
 }
 
-.preface-main {
+.pdmain>* {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.otherarrow {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 3px 10px 0 rgba(43, 95, 164, 0.30);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    margin: 35px 30px;
+}
+
+.fleft {
+    background: #16417B url(../img/fleftarr.png) no-repeat center;
+}
+
+.fright {
+    background: #16417B url(../img/frightarr.png) no-repeat center;
+    margin-left: 0;
+}
+
+.shuoming1 {
+    font-family: STZhongsong;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 42px 0;
+    margin-right: 94px;
+}
+
+.contrl {
+    height: 60px;
+    margin-top: 20px;
+    /* padding-left: 94px; */
+    /* filter: brightness(0.5); */
+    position: relative;
+}
+
+.contrl>img {
+    height: 100%;
+    width: auto;
+    filter: brightness(0.5);
+}
+
+.light {
+    height: 100%;
+    width: 100px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
 }
 
-.animated {
-    animation-duration: 3s;
+.light>img {
+    position: absolute;
+    height: 100%;
+    /* left: 94px; */
 }
 
-.nav-img {}
+.pdreturn {
+    padding-top: 28px;
+    padding-left: 20px;
+}
+
+.pdreturn>p {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: justify;
+}
+
+.shuoming2 {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 42px 0;
+    padding-left: 45px;
+    padding-right: 16px;
+}
