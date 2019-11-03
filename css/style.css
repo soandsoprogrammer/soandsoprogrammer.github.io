@@ -30,7 +30,7 @@ span {
 }
 
 .Letter-paper {
-  background: url(../img/bg.jpg);
+  background: url(https://pic.superbed.cn/item/5dbeeb648e0e2e3ee9df2fc5.jpg);
   background-repeat: no-repeat;
   /* width: 375px; */
   height: 100vh;
@@ -41,7 +41,7 @@ span {
 
 @media screen and (max-width: 769px) {
   .Letter-paper {
-    background: url(../img/view.jpg);
+    background: url(https://pic.superbed.cn/item/5dbeeb648e0e2e3ee9df2fc5.jpg);
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
