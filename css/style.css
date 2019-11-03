@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+span {
+  font-family: "微软雅黑";
+  color: #333;
+  line-height: 24px;
+  text-indent: 1em;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.name span {
+  text-indent: 0;
+}
+
+.hide .active-container::after {
+  display: none !important;
+}
+
+@media screen and (max-width: 769px) {
+  .Letter-paper {
+    background: url(../img/view.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    padding-top: 56px;
+    padding-left: 15px;
+  }
+}
