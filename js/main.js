@@ -5,8 +5,11 @@ $('.name').typeIt({
   function() {
     $('.name').addClass("hide")
     $('.title').typeIt({
-        whatToType: ["祝你生日快乐，祝你百岁无忧", "也祝世界和平，祝你愿望都实现。"],
-        typeSpeed: 100
+        whatToType: ["在这个特殊的日子里，我只想对你说：",
+          "我……",
+          "祝你生日快乐，祝你百岁无忧.", "也祝世界和平，祝你愿望都实现。"
+        ],
+        typeSpeed: 120
       },
       function() {
         $('.title').addClass("hide")
