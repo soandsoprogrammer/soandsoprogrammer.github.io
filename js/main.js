@@ -18,7 +18,16 @@ $('.name').typeIt({
             typeSpeed: 100
           },
           function() {
+            let music = document.querySelector("#music")
 
+            music.volume = 0.1
+            console.log(music.volume);
+            music.play()
+            setTimeout(function() {
+              music.pause()
+            }, 30000)
           })
       });
   })
+
+// http://music.163.com/#/song?id=27570622
