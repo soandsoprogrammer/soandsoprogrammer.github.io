@@ -25,7 +25,7 @@ $('.name').typeIt({
             music.play()
             setTimeout(function() {
               music.pause()
-            }, 30000)
+            }, 60000)
           })
       });
   })
