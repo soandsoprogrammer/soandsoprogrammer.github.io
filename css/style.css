@@ -22,10 +22,21 @@ span {
 
 .name span {
   text-indent: 0;
+  padding-bottom: 5px;
 }
 
 .hide .active-container::after {
   display: none !important;
+}
+
+.Letter-paper {
+  background: url(../img/view.jpg);
+  background-repeat: no-repeat;
+  /* width: 375px; */
+  height: 100vh;
+  background-size: cover;
+  padding-top: 56px;
+  padding-left: 15px;
 }
 
 @media screen and (max-width: 769px) {
